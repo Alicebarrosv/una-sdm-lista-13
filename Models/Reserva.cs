@@ -1,0 +1,19 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text.Json.Serialization;
+using System.Threading.Tasks;
+
+namespace AmericanAirlinesApi.Models
+{
+    public class Reserva
+    {
+        public int Id{get; set;}
+        public int VooId{get; set;}
+        public string NomePassageiro{get; set;} = string.Empty;
+        public string Assento{get; set;} = string.Empty;
+        [JsonIgnore]
+        public Voo? Voo { get; set; } 
+        
+    }
+}
